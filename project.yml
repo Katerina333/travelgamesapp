@@ -22,6 +22,8 @@ packages:
     path: Packages/ContentKit
   PaywallKit:
     path: Packages/PaywallKit
+  RoadBingo:
+    path: Packages/Games/RoadBingo
 
 targets:
   MileQuest:
@@ -38,6 +40,7 @@ targets:
       - package: TripKit
       - package: ContentKit
       - package: PaywallKit
+      - package: RoadBingo
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.itpmgroup.travelgames
@@ -50,6 +53,18 @@ targets:
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
         SWIFT_EMIT_LOC_STRINGS: YES
 
+  MileQuestUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - App/UITests
+    dependencies:
+      - target: MileQuest
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+
 schemes:
   MileQuest:
     build:
@@ -59,5 +74,7 @@ schemes:
       config: Debug
     test:
       config: Debug
+      targets:
+        - MileQuestUITests
     archive:
       config: Release

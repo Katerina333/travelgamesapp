@@ -1,0 +1,32 @@
+{
+  "id": "cabinbingo_en_v1",
+  "gameID": "cabinbingo",
+  "locale": "en",
+  "version": 1,
+  "entries": [
+    { "text": "Drink cart" },
+    { "text": "Seatbelt sign on" },
+    { "text": "Cloud shaped like an animal" },
+    { "text": "Wing out the window" },
+    { "text": "Flight attendant" },
+    { "text": "Tray table down" },
+    { "text": "Someone sleeping" },
+    { "text": "Window shade closed" },
+    { "text": "Snack bag" },
+    { "text": "Safety card" },
+    { "text": "Open luggage bin" },
+    { "text": "Headphones" },
+    { "text": "Blanket" },
+    { "text": "Baby on board" },
+    { "text": "Captain announcement" },
+    { "text": "Someone reading a book" },
+    { "text": "Cup of water" },
+    { "text": "Seat pocket magazine" },
+    { "text": "Another airplane out the window", "bands": [1, 2, 3, 4] },
+    { "text": "City lights below", "bands": [1, 2, 3, 4] },
+    { "text": "River from above", "bands": [1, 2, 3, 4] },
+    { "text": "Turbulence bump", "bands": [2, 3, 4] },
+    { "text": "Landing gear sound", "bands": [2, 3, 4] },
+    { "text": "Air vent open" }
+  ]
+}

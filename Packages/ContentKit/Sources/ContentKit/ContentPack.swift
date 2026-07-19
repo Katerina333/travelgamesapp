@@ -54,6 +54,17 @@ public enum PackLoader {
         return chain
     }
 
+    /// Loads from ContentKit's bundled packs, normalizing "en_US" → "en-US",
+    /// with a final fallback to the English base pack.
+    public static func loadBundledPack(
+        gameID: String,
+        localeIdentifier: String = Locale.current.identifier
+    ) -> ContentPack? {
+        let normalized = localeIdentifier.replacingOccurrences(of: "_", with: "-")
+        return loadPack(gameID: gameID, locale: normalized, in: .module)
+            ?? loadPack(gameID: gameID, locale: "en", in: .module)
+    }
+
     public static func loadPack(gameID: String, locale: String, in bundle: Bundle) -> ContentPack? {
         for candidate in localeFallbackChain(for: locale) {
             if let url = bundle.url(forResource: "\(gameID)_\(candidate)", withExtension: "json"),
