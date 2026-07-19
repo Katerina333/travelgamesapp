@@ -137,9 +137,16 @@ public enum CoreSchema {
         [Trip.self, Traveler.self, GameSessionRecord.self]
     }
 
-    public static func container(inMemory: Bool = false) throws -> ModelContainer {
+    public static func container(at url: URL? = nil, inMemory: Bool = false) throws -> ModelContainer {
         let schema = Schema(models)
-        let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: inMemory)
+        let config: ModelConfiguration
+        if inMemory {
+            config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
+        } else if let url {
+            config = ModelConfiguration(schema: schema, url: url)
+        } else {
+            config = ModelConfiguration(schema: schema)
+        }
         return try ModelContainer(for: schema, configurations: [config])
     }
 }

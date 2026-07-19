@@ -3,45 +3,171 @@
   "strings" : {
     "home.title" : {
       "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "MileQuest" } }
-      }
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "MileQuest" } } }
     },
     "home.subtitle" : {
       "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Screen-light games for the whole car — fully offline." } }
-      }
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Screen-light games for the whole car — fully offline." } } }
     },
     "home.newTrip" : {
       "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Start a trip" } }
-      }
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Start a trip" } } }
+    },
+    "home.continueTrip" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Continue trip" } } }
+    },
+    "home.history" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Past trips" } } }
     },
     "settings.theme" : {
       "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Theme" } }
-      }
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Theme" } } }
     },
     "settings.theme.auto" : {
       "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Auto" } }
-      }
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Auto" } } }
     },
     "settings.theme.light" : {
       "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Light" } }
-      }
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Light" } } }
     },
     "settings.theme.night" : {
       "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Night" } }
-      }
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Night" } } }
+    },
+    "onboarding.title" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "New trip" } } }
+    },
+    "onboarding.travelType" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "How are you travelling?" } } }
+    },
+    "onboarding.travelType.car" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Car" } } }
+    },
+    "onboarding.travelType.plane" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Airplane" } } }
+    },
+    "onboarding.travelers" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Who is travelling?" } } }
+    },
+    "onboarding.addTraveler" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Add traveler" } } }
+    },
+    "onboarding.traveler.name" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Name" } } }
+    },
+    "onboarding.traveler.age" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Age" } } }
+    },
+    "onboarding.traveler.driver" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Driver" } } }
+    },
+    "onboarding.length" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Trip length" } } }
+    },
+    "onboarding.length.short" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Under 1h" } } }
+    },
+    "onboarding.length.medium" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "1–3h" } } }
+    },
+    "onboarding.length.long" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "3h or more" } } }
+    },
+    "onboarding.destination" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Where to? (optional)" } } }
+    },
+    "onboarding.destination.placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Grandma's house" } } }
+    },
+    "onboarding.createTrip" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Create trip" } } }
+    },
+    "trip.title" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Your trip" } } }
+    },
+    "trip.games" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Games" } } }
+    },
+    "trip.games.empty" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "More games coming in the next update!" } } }
+    },
+    "trip.leaderboard" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Leaderboard" } } }
+    },
+    "trip.complete" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Finish" } } }
+    },
+    "trip.status.inProgress" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "In progress" } } }
+    },
+    "game.roadbingo.name" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Road Bingo" } } }
+    },
+    "game.cabinbingo.name" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Cabin Bingo" } } }
+    },
+    "bingo.completed" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Bingo! Board complete!" } } }
+    },
+    "bingo.whoSpotted" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Who spotted it?" } } }
+    },
+    "bingo.packMissing" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "This game's content pack is missing." } } }
+    },
+    "meter.warning" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Free time left:" } } }
+    },
+    "meter.locked.title" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Free play is over" } } }
+    },
+    "meter.locked.message" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Subscribe to keep playing. Your trip and scores are saved." } } }
+    },
+    "common.done" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Done" } } }
+    },
+    "common.cancel" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Cancel" } } }
+    },
+    "common.save" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Save" } } }
     }
   },
   "version" : "1.0"
