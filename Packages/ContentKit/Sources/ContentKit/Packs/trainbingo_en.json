@@ -1,0 +1,32 @@
+{
+  "id": "trainbingo_en_v1",
+  "gameID": "trainbingo",
+  "locale": "en",
+  "version": 1,
+  "entries": [
+    { "text": "Conductor" },
+    { "text": "Ticket check" },
+    { "text": "Tunnel" },
+    { "text": "Station platform" },
+    { "text": "Another train passing" },
+    { "text": "Luggage rack" },
+    { "text": "Cows out the window" },
+    { "text": "Horses out the window" },
+    { "text": "Bridge" },
+    { "text": "River" },
+    { "text": "Someone sleeping" },
+    { "text": "Snack trolley" },
+    { "text": "Backpack" },
+    { "text": "Level crossing" },
+    { "text": "Station clock" },
+    { "text": "Announcement" },
+    { "text": "Sliding doors" },
+    { "text": "Map on the wall" },
+    { "text": "Tractor in a field" },
+    { "text": "Church tower", "bands": [1, 2, 3, 4] },
+    { "text": "Wind turbine", "bands": [1, 2, 3, 4] },
+    { "text": "Power lines", "bands": [1, 2, 3, 4] },
+    { "text": "Freight train", "bands": [2, 3, 4] },
+    { "text": "Factory chimney", "bands": [2, 3, 4] }
+  ]
+}

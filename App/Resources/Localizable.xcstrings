@@ -53,6 +53,10 @@
       "extractionState" : "manual",
       "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Airplane" } } }
     },
+    "onboarding.travelType.train" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Train" } } }
+    },
     "onboarding.travelers" : {
       "extractionState" : "manual",
       "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Who is travelling?" } } }
@@ -132,6 +136,10 @@
     "game.cabinbingo.name" : {
       "extractionState" : "manual",
       "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Cabin Bingo" } } }
+    },
+    "game.trainbingo.name" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Rail Bingo" } } }
     },
     "bingo.completed" : {
       "extractionState" : "manual",

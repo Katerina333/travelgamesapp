@@ -3,7 +3,7 @@ import CoreKit
 import GameEngine
 
 /// Creates a trip with its personalised game board (§2.1 step 3). Quiet Mode
-/// defaults on for plane trips (§1.4).
+/// defaults on for plane and train trips — shared public space (§1.4).
 public enum TripBuilder {
     public static func makeTrip(
         travelers: [Traveler],
@@ -16,7 +16,7 @@ public enum TripBuilder {
         now: Date = .now
     ) -> Trip {
         let players = travelers.map(\.playerContext)
-        let quiet = mode == .plane
+        let quiet = mode.defaultsToQuietMode
         let board = GameBoardGenerator
             .recommendedManifests(from: manifests, players: players, mode: mode, quietMode: quiet)
             .map(\.id)

@@ -35,6 +35,7 @@ struct MileQuestApp: App {
         MainActor.assumeIsolated {
             GameRegistry.shared.register(BingoGame.roadBingo())
             GameRegistry.shared.register(BingoGame.cabinBingo())
+            GameRegistry.shared.register(BingoGame.trainBingo())
         }
     }
 

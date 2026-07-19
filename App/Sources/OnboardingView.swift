@@ -27,9 +27,9 @@ struct OnboardingView: View {
 
     private var driverCount: Int { drafts.filter(\.isDriver).count }
 
-    /// Car trips require exactly one driver (§2.1); planes have none (§1.4).
+    /// Car trips require exactly one driver (§2.1); planes and trains have none.
     private var canCreate: Bool {
-        !drafts.isEmpty && (mode == .plane || driverCount == 1)
+        !drafts.isEmpty && (!mode.requiresDriver || driverCount == 1)
     }
 
     var body: some View {
@@ -39,6 +39,7 @@ struct OnboardingView: View {
                     Picker("onboarding.travelType", selection: $mode) {
                         Text("onboarding.travelType.car").tag(TravelMode.car)
                         Text("onboarding.travelType.plane").tag(TravelMode.plane)
+                        Text("onboarding.travelType.train").tag(TravelMode.train)
                     }
                     .pickerStyle(.segmented)
                     .accessibilityIdentifier("picker.travelType")

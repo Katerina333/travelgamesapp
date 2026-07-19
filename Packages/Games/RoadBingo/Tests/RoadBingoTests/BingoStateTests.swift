@@ -58,7 +58,7 @@ final class BingoStateTests: XCTestCase {
 
     // The bundled packs both games rely on must exist and fill a 4×4 board.
     func testBundledPacksExist() {
-        for gameID in ["roadbingo", "cabinbingo"] {
+        for gameID in ["roadbingo", "cabinbingo", "trainbingo"] {
             let pack = PackLoader.loadBundledPack(gameID: gameID, localeIdentifier: "en-US")
             XCTAssertNotNil(pack, "\(gameID) pack missing")
             XCTAssertGreaterThanOrEqual(pack?.entries.count ?? 0, 16)

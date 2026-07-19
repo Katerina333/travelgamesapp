@@ -15,6 +15,11 @@ final class TripBuilderTests: XCTestCase {
                 id: "cabinbingo", nameKey: "c", icon: "star", minPlayers: 1,
                 ageBands: .preschool ... .adult, driverSafe: true,
                 screenLevel: .minimal, travelModes: [.plane], contentScope: .youngestInRound
+            ),
+            GameManifest(
+                id: "trainbingo", nameKey: "t", icon: "star", minPlayers: 1,
+                ageBands: .preschool ... .adult, driverSafe: true,
+                screenLevel: .minimal, travelModes: [.train], contentScope: .youngestInRound
             )
         ]
     }
@@ -43,6 +48,18 @@ final class TripBuilderTests: XCTestCase {
         )
         XCTAssertEqual(trip.gameBoard, ["cabinbingo"])
         XCTAssertTrue(trip.quietMode)
+    }
+
+    // Train trips: window-spotting game matched, Quiet Mode on, no driver needed.
+    func testTrainTripMatchesTrainGamesQuietByDefault() {
+        let trip = TripBuilder.makeTrip(
+            travelers: [Traveler(name: "Kid", age: 8), Traveler(name: "Dad", age: 40)],
+            mode: .train, length: .long, manifests: manifests
+        )
+        XCTAssertEqual(trip.gameBoard, ["trainbingo"])
+        XCTAssertTrue(trip.quietMode)
+        XCTAssertEqual(trip.status, .active)
+        XCTAssertFalse(trip.travelers.contains { $0.isDriver })
     }
 
     func testScheduledTripStaysScheduled() {
