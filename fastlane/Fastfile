@@ -1,0 +1,56 @@
+# Fastlane lanes (§8.3). Signing: Xcode automatic (cloud-managed) with the
+# App Store Connect API key from /keys/ (never committed).
+
+default_platform(:ios)
+
+platform :ios do
+  before_all do
+    # xcodegen keeps the project file out of git churn.
+    sh("cd .. && xcodegen generate")
+  end
+
+  def asc_api_key
+    app_store_connect_api_key(
+      key_id: ENV.fetch("ASC_KEY_ID"),
+      issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+      key_filepath: ENV.fetch("ASC_KEY_PATH")
+    )
+  end
+
+  desc "Resolve packages, run tests, build a Release archive"
+  lane :build do
+    run_tests(
+      scheme: "MileQuest",
+      device: "iPhone 16",
+      prelaunch_simulator: true
+    )
+    build_app(
+      scheme: "MileQuest",
+      export_method: "app-store",
+      skip_archive: false,
+      skip_package_ipa: true
+    )
+  end
+
+  desc "Upload a beta build to TestFlight"
+  lane :beta do
+    api_key = asc_api_key
+    increment_build_number(xcodeproj: "MileQuest.xcodeproj")
+    build_app(scheme: "MileQuest", export_method: "app-store")
+    pilot(api_key: api_key, skip_waiting_for_build_processing: true)
+  end
+
+  desc "Archive and upload build + localised metadata to App Store Connect"
+  lane :release do
+    api_key = asc_api_key
+    increment_build_number(xcodeproj: "MileQuest.xcodeproj")
+    build_app(scheme: "MileQuest", export_method: "app-store")
+    deliver(
+      api_key: api_key,
+      submit_for_review: false,
+      automatic_release: false,
+      force: true,
+      metadata_path: "./fastlane/metadata"
+    )
+  end
+end

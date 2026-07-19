@@ -1,0 +1,32 @@
+{
+  "id": "roadbingo_en_v1",
+  "gameID": "roadbingo",
+  "locale": "en",
+  "version": 1,
+  "entries": [
+    { "text": "Red car" },
+    { "text": "Truck" },
+    { "text": "Motorcycle" },
+    { "text": "Cow" },
+    { "text": "Horse" },
+    { "text": "Gas station" },
+    { "text": "Bridge" },
+    { "text": "Tunnel" },
+    { "text": "Police car" },
+    { "text": "School bus" },
+    { "text": "Traffic light" },
+    { "text": "Bird" },
+    { "text": "Airplane in the sky" },
+    { "text": "River" },
+    { "text": "Yellow car" },
+    { "text": "Speed limit sign" },
+    { "text": "Camper van" },
+    { "text": "Dog in a car" },
+    { "text": "Water tower", "bands": [1, 2, 3, 4] },
+    { "text": "Wind turbine", "bands": [1, 2, 3, 4] },
+    { "text": "License plate from another region", "bands": [2, 3, 4] },
+    { "text": "Construction crane", "bands": [1, 2, 3, 4] },
+    { "text": "Flag" },
+    { "text": "Tractor" }
+  ]
+}

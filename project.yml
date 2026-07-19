@@ -1,0 +1,63 @@
+name: MileQuest
+options:
+  bundleIdPrefix: com.itpmgroup
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+configFiles:
+  Debug: Config/AppConfig.xcconfig
+  Release: Config/AppConfig.xcconfig
+
+packages:
+  CoreKit:
+    path: Packages/CoreKit
+  DesignSystem:
+    path: Packages/DesignSystem
+  GameEngine:
+    path: Packages/GameEngine
+  TripKit:
+    path: Packages/TripKit
+  ContentKit:
+    path: Packages/ContentKit
+  PaywallKit:
+    path: Packages/PaywallKit
+
+targets:
+  MileQuest:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - App/Sources
+      - App/Resources
+    dependencies:
+      - package: CoreKit
+      - package: DesignSystem
+      - package: GameEngine
+      - package: TripKit
+      - package: ContentKit
+      - package: PaywallKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.itpmgroup.travelgames
+        MARKETING_VERSION: $(APP_MARKETING_VERSION)
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: MileQuest
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "The microphone is used for voice games like story recording and 20 Questions."
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        SWIFT_EMIT_LOC_STRINGS: YES
+
+schemes:
+  MileQuest:
+    build:
+      targets:
+        MileQuest: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+    archive:
+      config: Release

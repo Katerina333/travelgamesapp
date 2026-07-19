@@ -1,0 +1,26 @@
+included:
+  - App
+  - Packages
+
+excluded:
+  - "**/.build"
+  - "**/Tests"
+
+line_length:
+  warning: 140
+  error: 200
+
+identifier_name:
+  min_length: 2
+
+custom_rules:
+  # §4.4 — user-facing strings go through String Catalogs / content packs.
+  # Flags string literals passed to common text APIs that contain spaces
+  # (localization keys are dot-separated, no spaces).
+  no_hardcoded_strings:
+    name: "No hardcoded user-facing strings"
+    regex: '(Text|Label|navigationTitle)\("[^"]* [^"]*"'
+    match_kinds:
+      - string
+    message: "User-facing strings must be localization keys (String Catalogs), not literal sentences."
+    severity: warning
