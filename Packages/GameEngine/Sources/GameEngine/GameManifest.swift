@@ -49,7 +49,7 @@ public struct GameManifest: Identifiable, Sendable {
         ageBands: ClosedRange<AgeBand>,
         driverSafe: Bool,
         screenLevel: ScreenLevel,
-        travelModes: Set<TravelMode> = [.car, .plane],
+        travelModes: Set<TravelMode> = Set(TravelMode.allCases),
         contentScope: ContentScope,
         requiredCapabilities: Set<GameCapability> = [],
         quietModeSafe: Bool = true

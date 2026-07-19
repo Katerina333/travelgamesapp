@@ -79,7 +79,7 @@ struct RootView: View {
             path = [trip]
         } label: {
             HStack(spacing: Spacing.m) {
-                Image(systemName: trip.travelMode == .plane ? "airplane" : "car.fill")
+                Image(systemName: trip.travelMode.systemImage)
                     .font(.title2)
                     .foregroundStyle(tokens.accentPrimary)
                 VStack(alignment: .leading, spacing: Spacing.xs) {
@@ -113,7 +113,7 @@ struct RootView: View {
                     path = [trip]
                 } label: {
                     HStack {
-                        Image(systemName: trip.travelMode == .plane ? "airplane" : "car.fill")
+                        Image(systemName: trip.travelMode.systemImage)
                             .foregroundStyle(tokens.contentSecondary)
                         Text(verbatim: trip.destinationName ?? trip.createdAt.formatted(date: .abbreviated, time: .omitted))
                             .foregroundStyle(tokens.contentPrimary)

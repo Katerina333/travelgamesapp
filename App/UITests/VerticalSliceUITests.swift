@@ -8,6 +8,29 @@ final class VerticalSliceUITests: XCTestCase {
         continueAfterFailure = false
     }
 
+    // Train mode: no driver concept, board matched to train games only.
+    func testTrainTripHasNoDriverAndGetsTrainGames() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-uitest-reset"]
+        app.launch()
+
+        app.buttons["btn.newTrip"].tap()
+        app.buttons["Train"].tap()
+
+        app.buttons["btn.addTraveler"].tap()
+        XCTAssertTrue(app.pickerWheels.firstMatch.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.switches["toggle.driver"].exists, "trains have no driver")
+        app.buttons["btn.saveTraveler"].tap()
+
+        let createButton = app.buttons["btn.createTrip"]
+        XCTAssertTrue(createButton.isEnabled, "no driver required for train trips")
+        createButton.tap()
+
+        XCTAssertTrue(app.buttons["row.game.trainbingo"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["row.game.roadbingo"].exists)
+        XCTAssertFalse(app.buttons["row.game.cabinbingo"].exists)
+    }
+
     func testCreateTripPlayBingoForceQuitAndResume() {
         let app = XCUIApplication()
         app.launchArguments = ["-uitest-reset"]

@@ -1,10 +1,28 @@
 import Foundation
 
 /// Travel mode selected at trip creation. Drives game filtering, milestone
-/// pacing, and quiet mode (§1.4).
+/// pacing, and quiet mode (§1.4). Trains behave like a hybrid: window-spotting
+/// works (like car) but there is no driver and Quiet Mode defaults on
+/// (like plane — shared public space).
 public enum TravelMode: String, Codable, CaseIterable, Sendable {
     case car
     case plane
+    case train
+
+    /// SF Symbol used wherever the trip's mode is shown.
+    public var systemImage: String {
+        switch self {
+        case .car: return "car.fill"
+        case .plane: return "airplane"
+        case .train: return "train.side.front.car"
+        }
+    }
+
+    /// Whether one traveler must be marked as driver (§1.2) — car only.
+    public var requiresDriver: Bool { self == .car }
+
+    /// Shared public space → Quiet Mode defaults on (§1.4).
+    public var defaultsToQuietMode: Bool { self != .car }
 }
 
 /// Age bands used for content selection and game recommendation (§1.5).

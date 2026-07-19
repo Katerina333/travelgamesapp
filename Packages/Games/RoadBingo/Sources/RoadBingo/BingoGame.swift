@@ -2,9 +2,10 @@ import SwiftUI
 import CoreKit
 import GameEngine
 
-/// Spotting bingo — one implementation, two manifests: Smart Road Bingo (car)
-/// and Cabin Bingo (plane variant, §1.4). Content comes from the pack whose
-/// gameID matches the manifest id.
+/// Spotting bingo — one implementation, three manifests: Smart Road Bingo
+/// (car), Cabin Bingo (plane, §1.4), and Rail Bingo (train — window spotting
+/// like car, but no driver). Content comes from the pack whose gameID matches
+/// the manifest id.
 public struct BingoGame: TripGame {
     public let manifest: GameManifest
 
@@ -32,6 +33,20 @@ public struct BingoGame: TripGame {
             driverSafe: true, // no driver concept on planes (§1.4)
             screenLevel: .minimal,
             travelModes: [.plane],
+            contentScope: .youngestInRound
+        ))
+    }
+
+    public static func trainBingo() -> BingoGame {
+        BingoGame(manifest: GameManifest(
+            id: "trainbingo",
+            nameKey: "game.trainbingo.name",
+            icon: "train.side.front.car",
+            minPlayers: 1,
+            ageBands: .preschool ... .adult,
+            driverSafe: true, // no driver concept on trains
+            screenLevel: .minimal,
+            travelModes: [.train],
             contentScope: .youngestInRound
         ))
     }
