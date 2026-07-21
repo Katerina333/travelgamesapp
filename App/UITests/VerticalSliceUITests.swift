@@ -15,7 +15,7 @@ final class VerticalSliceUITests: XCTestCase {
         app.launch()
 
         app.buttons["btn.newTrip"].tap()
-        app.buttons["Train"].tap()
+        app.buttons["travelType.train"].tap()
 
         app.buttons["btn.addTraveler"].tap()
         XCTAssertTrue(app.pickerWheels.firstMatch.waitForExistence(timeout: 5))

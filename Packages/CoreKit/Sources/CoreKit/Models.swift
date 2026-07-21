@@ -8,6 +8,9 @@ public final class Traveler {
     @Attribute(.unique) public var id: UUID
     public var name: String
     public var avatar: String
+    /// Index into the DesignSystem avatar color palette (default keeps a
+    /// safe value for lightweight migration of pre-existing rows).
+    public var avatarColorIndex: Int = 0
     public var age: Int
     public var isDriver: Bool
     public var isNapping: Bool
@@ -18,7 +21,8 @@ public final class Traveler {
     public init(
         id: UUID = UUID(),
         name: String,
-        avatar: String = "face.smiling",
+        avatar: String = "face.smiling.fill",
+        avatarColorIndex: Int = 0,
         age: Int,
         isDriver: Bool = false,
         isNapping: Bool = false,
@@ -27,6 +31,7 @@ public final class Traveler {
         self.id = id
         self.name = name
         self.avatar = avatar
+        self.avatarColorIndex = avatarColorIndex
         self.age = age
         self.isDriver = isDriver
         self.isNapping = isNapping

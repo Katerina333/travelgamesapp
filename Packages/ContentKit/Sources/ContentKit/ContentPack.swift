@@ -5,16 +5,34 @@ import CoreKit
 /// New content ships without touching game code.
 public struct ContentPack: Codable, Sendable {
     public struct Entry: Codable, Sendable {
+        /// Primary text: bingo item, charades word, trivia question, or the
+        /// first option of a Would-You-Rather dilemma.
         public let text: String
         /// Age bands this entry suits. Empty/nil = all bands.
         public let bands: [AgeBand]?
         /// Forbidden words for Taboo-style games; extra payload per game type.
         public let forbidden: [String]?
+        /// Second option for Would-You-Rather dilemmas.
+        public let optionB: String?
+        /// Answer choices for trivia questions.
+        public let choices: [String]?
+        /// Index into `choices` of the correct trivia answer.
+        public let answer: Int?
 
-        public init(text: String, bands: [AgeBand]? = nil, forbidden: [String]? = nil) {
+        public init(
+            text: String,
+            bands: [AgeBand]? = nil,
+            forbidden: [String]? = nil,
+            optionB: String? = nil,
+            choices: [String]? = nil,
+            answer: Int? = nil
+        ) {
             self.text = text
             self.bands = bands
             self.forbidden = forbidden
+            self.optionB = optionB
+            self.choices = choices
+            self.answer = answer
         }
     }
 

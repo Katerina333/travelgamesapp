@@ -1,0 +1,28 @@
+{
+  "id": "charades_en_v1",
+  "gameID": "charades",
+  "locale": "en",
+  "version": 1,
+  "entries": [
+    { "text": "Cat", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Dog", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Elephant", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Rabbit", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Monkey", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Fish", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Bird", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Snake", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Sleeping", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Eating", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Crying", "bands": [0, 1, 2, 3, 4] },
+    { "text": "Laughing", "bands": [0, 1, 2, 3, 4] },
+    { "text": "A spider", "bands": [1, 2, 3, 4] },
+    { "text": "Brushing teeth", "bands": [1, 2, 3, 4] },
+    { "text": "A crocodile", "bands": [1, 2, 3, 4] },
+    { "text": "Playing guitar", "bands": [2, 3, 4] },
+    { "text": "A robot", "bands": [2, 3, 4] },
+    { "text": "Taking a selfie", "bands": [2, 3, 4] },
+    { "text": "A superhero", "bands": [2, 3, 4] },
+    { "text": "Driving a car", "bands": [1, 2, 3, 4] }
+  ]
+}

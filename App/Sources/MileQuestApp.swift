@@ -3,6 +3,9 @@ import SwiftData
 import CoreKit
 import GameEngine
 import RoadBingo
+import WouldYouRather
+import Trivia
+import Charades
 import DesignSystem
 
 @main
@@ -36,6 +39,9 @@ struct MileQuestApp: App {
             GameRegistry.shared.register(BingoGame.roadBingo())
             GameRegistry.shared.register(BingoGame.cabinBingo())
             GameRegistry.shared.register(BingoGame.trainBingo())
+            GameRegistry.shared.register(WouldYouRatherGame())
+            GameRegistry.shared.register(TriviaGame())
+            GameRegistry.shared.register(CharadesGame())
         }
     }
 

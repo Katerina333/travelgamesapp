@@ -24,6 +24,12 @@ packages:
     path: Packages/PaywallKit
   RoadBingo:
     path: Packages/Games/RoadBingo
+  WouldYouRather:
+    path: Packages/Games/WouldYouRather
+  Trivia:
+    path: Packages/Games/Trivia
+  Charades:
+    path: Packages/Games/Charades
 
 targets:
   MileQuest:
@@ -41,6 +47,9 @@ targets:
       - package: ContentKit
       - package: PaywallKit
       - package: RoadBingo
+      - package: WouldYouRather
+      - package: Trivia
+      - package: Charades
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.itpmgroup.travelgames
