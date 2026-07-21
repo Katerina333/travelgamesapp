@@ -22,9 +22,15 @@ struct GameHostView: View {
     @State private var session: GameSession?
     @State private var meter: PlaytimeMeter?
     @State private var meterState: MeterState = .playing(remaining: PlaytimeMeter.freeLimitSeconds)
+    @State private var confettiTrigger = 0
+    @State private var lastTotal = 0
 
     private var tokens: ThemeTokens {
         themeManager.tokens(systemDark: colorScheme == .dark)
+    }
+
+    private var scoreTotal: Int {
+        session?.scores.values.reduce(0, +) ?? 0
     }
 
     var body: some View {
@@ -37,6 +43,10 @@ struct GameHostView: View {
                 ProgressView()
             }
 
+            ConfettiView(trigger: confettiTrigger, colors: AvatarCatalog.colors)
+                .frame(maxHeight: .infinity, alignment: .top)
+                .padding(.top, 80)
+
             if case .warning(let remaining) = meterState {
                 warningBanner(remaining: remaining)
             }
@@ -46,6 +56,11 @@ struct GameHostView: View {
         }
         .navigationTitle(Text(LocalizedStringKey(game.manifest.nameKey)))
         .navigationBarTitleDisplayMode(.inline)
+        .onChange(of: scoreTotal) { old, new in
+            // Celebrate whenever a point is scored (§5.2 confetti on wins).
+            if new > old { confettiTrigger += 1 }
+            lastTotal = new
+        }
         .task { await runMeter() }
         .onAppear(perform: setupSession)
         .onDisappear {

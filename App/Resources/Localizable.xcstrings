@@ -176,6 +176,126 @@
     "common.save" : {
       "extractionState" : "manual",
       "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Save" } } }
+    },
+    "game.wouldyourather.name" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Would You Rather" } } }
+    },
+    "game.trivia.name" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Kids Trivia" } } }
+    },
+    "game.charades.name" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Charades" } } }
+    },
+    "onboarding.heading" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Let's set up your trip!" } } }
+    },
+    "onboarding.subheading" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Add who's coming and we'll pick the perfect games." } } }
+    },
+    "onboarding.ageValue %lld" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Age %lld" } } }
+    },
+    "onboarding.driverHint" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Mark exactly one traveler as the driver." } } }
+    },
+    "onboarding.editTraveler" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Edit traveler" } } }
+    },
+    "onboarding.defaultName %lld" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Player %lld" } } }
+    },
+    "onboarding.traveler.namePrompt" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Enter a name" } } }
+    },
+    "onboarding.traveler.pickAvatar" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Pick an avatar" } } }
+    },
+    "onboarding.traveler.pickColor" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Pick a color" } } }
+    },
+    "wyr.title" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Would you rather…" } } }
+    },
+    "wyr.or" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "OR" } } }
+    },
+    "wyr.turn %@" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "%@'s pick" } } }
+    },
+    "wyr.next" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Next" } } }
+    },
+    "wyr.empty" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "No dilemmas available yet." } } }
+    },
+    "trivia.turn %@" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "%@'s question" } } }
+    },
+    "trivia.next" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Next player" } } }
+    },
+    "trivia.empty" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "No questions available yet." } } }
+    },
+    "charades.turn %@" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "%@ acts it out!" } } }
+    },
+    "charades.instruction" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Peek the word, then act it out with only your fingers and face — no sounds!" } } }
+    },
+    "charades.peek" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Show my word" } } }
+    },
+    "charades.yourWord" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Your word is" } } }
+    },
+    "charades.actItOut" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Remember it — fingers and face only!" } } }
+    },
+    "charades.startActing" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "I'm ready to act" } } }
+    },
+    "charades.actingNow" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Act it out! Everyone else, guess away!" } } }
+    },
+    "charades.guessed" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "They guessed it!" } } }
+    },
+    "charades.pass" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Pass" } } }
+    },
+    "charades.empty" : {
+      "extractionState" : "manual",
+      "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "No words available yet." } } }
     }
   },
   "version" : "1.0"

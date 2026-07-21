@@ -1,0 +1,24 @@
+{
+  "id": "trivia_en_v1",
+  "gameID": "trivia",
+  "locale": "en",
+  "version": 1,
+  "entries": [
+    { "text": "What sound does a cow make?", "choices": ["Moo", "Woof", "Quack"], "answer": 0, "bands": [0, 1] },
+    { "text": "What color is the sky on a sunny day?", "choices": ["Green", "Blue", "Purple"], "answer": 1, "bands": [0, 1] },
+    { "text": "How many legs does a dog have?", "choices": ["Two", "Four", "Six"], "answer": 1, "bands": [0, 1] },
+    { "text": "Which animal says 'meow'?", "choices": ["Cat", "Cow", "Duck"], "answer": 0, "bands": [0, 1] },
+    { "text": "What do bees make?", "choices": ["Milk", "Honey", "Bread"], "answer": 1, "bands": [0, 1] },
+    { "text": "What fruit is yellow and curved?", "choices": ["Apple", "Banana", "Grape"], "answer": 1, "bands": [0, 1] },
+    { "text": "How many days are in a week?", "choices": ["Five", "Seven", "Ten"], "answer": 1, "bands": [1, 2] },
+    { "text": "Which planet do we live on?", "choices": ["Mars", "Earth", "Jupiter"], "answer": 1, "bands": [1, 2] },
+    { "text": "What is 5 + 7?", "choices": ["11", "12", "13"], "answer": 1, "bands": [1, 2] },
+    { "text": "What is the largest ocean?", "choices": ["Atlantic", "Pacific", "Indian"], "answer": 1, "bands": [2, 3] },
+    { "text": "How many continents are there?", "choices": ["Five", "Seven", "Nine"], "answer": 1, "bands": [2, 3] },
+    { "text": "What gas do plants breathe in?", "choices": ["Oxygen", "Carbon dioxide", "Helium"], "answer": 1, "bands": [2, 3] },
+    { "text": "Who painted the Mona Lisa?", "choices": ["Van Gogh", "Da Vinci", "Picasso"], "answer": 1, "bands": [3, 4] },
+    { "text": "What is the capital of Japan?", "choices": ["Seoul", "Tokyo", "Beijing"], "answer": 1, "bands": [3, 4] },
+    { "text": "What is the speed of light approximately?", "choices": ["300,000 km/s", "3,000 km/s", "30 km/s"], "answer": 0, "bands": [3, 4] },
+    { "text": "Which is the smallest prime number?", "choices": ["1", "2", "3"], "answer": 1, "bands": [3, 4] }
+  ]
+}

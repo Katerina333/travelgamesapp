@@ -1,0 +1,23 @@
+{
+  "id": "wyr_en_v1",
+  "gameID": "wouldyourather",
+  "locale": "en",
+  "version": 1,
+  "entries": [
+    { "text": "Be able to fly", "optionB": "Be able to turn invisible" },
+    { "text": "Have a pet dragon", "optionB": "Have a pet dinosaur" },
+    { "text": "Eat pizza every day", "optionB": "Eat ice cream every day" },
+    { "text": "Be able to talk to animals", "optionB": "Be able to breathe underwater" },
+    { "text": "Have super speed", "optionB": "Have super strength" },
+    { "text": "Live in a treehouse", "optionB": "Live in a castle" },
+    { "text": "Always be a bit too hot", "optionB": "Always be a bit too cold" },
+    { "text": "Have a magic carpet", "optionB": "Have a talking robot" },
+    { "text": "Be a famous singer", "optionB": "Be a famous athlete" },
+    { "text": "Only be able to whisper", "optionB": "Only be able to shout" },
+    { "text": "Have hands for feet", "optionB": "Have feet for hands" },
+    { "text": "Explore outer space", "optionB": "Explore the deep ocean", "bands": [1, 2, 3, 4] },
+    { "text": "Be able to time travel to the past", "optionB": "Be able to time travel to the future", "bands": [2, 3, 4] },
+    { "text": "Never have homework again", "optionB": "Never have chores again", "bands": [1, 2, 3, 4] },
+    { "text": "Have a pause button for life", "optionB": "Have a rewind button for life", "bands": [3, 4] }
+  ]
+}
