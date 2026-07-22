@@ -54,5 +54,29 @@ final class ScreenshotUITests: XCTestCase {
         snap(app, "05-would-you-rather")
         app.buttons["btn.wyrOption.0"].tap()
         snap(app, "06-wyr-picked")
+
+        // Game picker
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        XCTAssertTrue(app.buttons["btn.chooseGames"].waitForExistence(timeout: 5))
+        app.buttons["btn.chooseGames"].tap()
+        XCTAssertTrue(app.buttons["btn.gamePickerDone"].waitForExistence(timeout: 5))
+        snap(app, "07-game-picker")
+    }
+
+    func testLanguageSwitch() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-uitest-reset"]
+        app.launch()
+
+        app.buttons["btn.settings"].tap()
+        XCTAssertTrue(app.buttons["btn.settingsDone"].waitForExistence(timeout: 5))
+        snap(app, "10-settings")
+        app.buttons["Español (México)"].firstMatch.tap()
+
+        // Selecting a language re-keys the app (settings closes) and the home
+        // CTA is now Spanish — proves the in-app switch works.
+        XCTAssertTrue(app.buttons["Iniciar un viaje"].waitForExistence(timeout: 6),
+                      "home CTA should be localized to Spanish")
+        snap(app, "11-home-spanish")
     }
 }

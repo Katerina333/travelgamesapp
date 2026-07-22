@@ -10,6 +10,7 @@ struct RootView: View {
 
     @State private var path: [Trip] = []
     @State private var showOnboarding = false
+    @State private var showSettings = false
 
     private var tokens: ThemeTokens {
         themeManager.tokens(systemDark: colorScheme == .dark)
@@ -47,7 +48,15 @@ struct RootView: View {
             .background(tokens.backgroundPrimary)
             .navigationDestination(for: Trip.self) { TripView(trip: $0) }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) { themePicker }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showSettings = true
+                    } label: {
+                        Image(systemName: "gearshape.fill")
+                            .foregroundStyle(tokens.contentSecondary)
+                    }
+                    .accessibilityIdentifier("btn.settings")
+                }
             }
         }
         .fullScreenCover(isPresented: $showOnboarding) {
@@ -55,6 +64,9 @@ struct RootView: View {
                 showOnboarding = false
                 path = [trip]
             }
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsView()
         }
     }
 
@@ -126,15 +138,5 @@ struct RootView: View {
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    private var themePicker: some View {
-        @Bindable var manager = themeManager
-        return Picker("settings.theme", selection: $manager.mode) {
-            Text("settings.theme.auto").tag(ThemeMode.auto)
-            Text("settings.theme.light").tag(ThemeMode.light)
-            Text("settings.theme.night").tag(ThemeMode.night)
-        }
-        .pickerStyle(.menu)
     }
 }
