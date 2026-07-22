@@ -14,6 +14,8 @@ struct TripView: View {
     @Environment(ThemeManager.self) private var themeManager
     @Environment(\.colorScheme) private var colorScheme
 
+    @State private var showGamePicker = false
+
     private var tokens: ThemeTokens { themeManager.tokens(systemDark: colorScheme == .dark) }
 
     private var manifests: [GameManifest] {
@@ -35,6 +37,7 @@ struct TripView: View {
         .background(tokens.backgroundPrimary)
         .navigationTitle(trip.destinationName.map { Text(verbatim: $0) } ?? Text("trip.title"))
         .navigationBarTitleDisplayMode(.large)
+        .sheet(isPresented: $showGamePicker) { GamePickerSheet(trip: trip) }
         .toolbar {
             if trip.status == .active || trip.status == .paused {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -51,9 +54,21 @@ struct TripView: View {
 
     private var gamesSection: some View {
         VStack(alignment: .leading, spacing: Spacing.m) {
-            Text("trip.games")
-                .font(.system(.title2, design: .rounded).bold())
-                .foregroundStyle(tokens.contentPrimary)
+            HStack {
+                Text("trip.games")
+                    .font(.system(.title2, design: .rounded).bold())
+                    .foregroundStyle(tokens.contentPrimary)
+                Spacer()
+                Button {
+                    showGamePicker = true
+                } label: {
+                    Label("trip.chooseGames", systemImage: "slider.horizontal.3")
+                        .font(.system(.subheadline, design: .rounded).weight(.semibold))
+                        .foregroundStyle(tokens.accentPrimary)
+                }
+                .buttonStyle(BouncyButtonStyle())
+                .accessibilityIdentifier("btn.chooseGames")
+            }
 
             if manifests.isEmpty {
                 Text("trip.games.empty")

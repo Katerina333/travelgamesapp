@@ -31,6 +31,34 @@ final class VerticalSliceUITests: XCTestCase {
         XCTAssertFalse(app.buttons["row.game.cabinbingo"].exists)
     }
 
+    // The player can deselect a game and it leaves the board.
+    func testGameSelectionRemovesGame() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-uitest-reset"]
+        app.launch()
+
+        app.buttons["btn.newTrip"].tap()
+        app.buttons["travelType.train"].tap() // no driver needed
+        app.buttons["btn.addTraveler"].tap()
+        XCTAssertTrue(app.pickerWheels.firstMatch.waitForExistence(timeout: 5))
+        app.pickerWheels.firstMatch.adjust(toPickerWheelValue: "9")
+        app.buttons["btn.saveTraveler"].tap()
+        app.buttons["btn.createTrip"].tap()
+
+        XCTAssertTrue(app.buttons["row.game.trivia"].waitForExistence(timeout: 6))
+
+        // Deselect Kids Trivia in the picker.
+        app.buttons["btn.chooseGames"].tap()
+        let triviaRow = app.buttons["gamePicker.row.trivia"]
+        XCTAssertTrue(triviaRow.waitForExistence(timeout: 5))
+        triviaRow.tap()
+        app.buttons["btn.gamePickerDone"].tap()
+
+        // Trivia is gone from the board; others remain.
+        XCTAssertFalse(app.buttons["row.game.trivia"].exists)
+        XCTAssertTrue(app.buttons["row.game.wouldyourather"].exists)
+    }
+
     func testCreateTripPlayBingoForceQuitAndResume() {
         let app = XCUIApplication()
         app.launchArguments = ["-uitest-reset"]

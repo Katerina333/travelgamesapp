@@ -69,6 +69,18 @@ targets:
         CFBundleDisplayName: MileQuest
         UILaunchScreen: {}
         ITSAppUsesNonExemptEncryption: false
+        # Declares the launch locales (§4.4) so the in-app language switcher
+        # can resolve each one's strings.
+        CFBundleLocalizations:
+          - en
+          - en-GB
+          - en-AU
+          - es-MX
+          - pt-BR
+          - uk
+          - fr-FR
+          - fr-CA
+          - zh-Hans
         NSMicrophoneUsageDescription: "The microphone is used for voice games like story recording and 20 Questions."
         UISupportedInterfaceOrientations~iphone:
           - UIInterfaceOrientationPortrait

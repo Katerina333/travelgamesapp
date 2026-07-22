@@ -12,6 +12,7 @@ import DesignSystem
 struct MileQuestApp: App {
     private let container: ModelContainer
     @State private var themeManager = ThemeManager()
+    @State private var localeManager = LocaleManager()
 
     init() {
         let fileManager = FileManager.default
@@ -49,6 +50,11 @@ struct MileQuestApp: App {
         WindowGroup {
             RootView()
                 .environment(themeManager)
+                .environment(localeManager)
+                .environment(\.locale, localeManager.locale)
+                // Re-key on language change so every localized string and
+                // content pack re-resolves immediately (§4.4).
+                .id(localeManager.tag)
         }
         .modelContainer(container)
     }
