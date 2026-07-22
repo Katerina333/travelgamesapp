@@ -67,6 +67,10 @@ targets:
       path: App/Info.plist
       properties:
         CFBundleDisplayName: MileQuest
+        # Reference the build settings so the release lanes' build-number
+        # override (CURRENT_PROJECT_VERSION xcarg) actually reaches the binary.
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
         UILaunchScreen: {}
         ITSAppUsesNonExemptEncryption: false
         # Declares the launch locales (§4.4) so the in-app language switcher
